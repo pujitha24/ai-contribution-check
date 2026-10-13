@@ -1,0 +1,26 @@
+[
+  {
+    "sha": "1f2e3d4c5b6a79881726354433221100ffeeddcc",
+    "commit": {
+      "author": { "name": "Ada Contrib", "email": "ada@example.com", "date": "2026-10-10T09:00:00Z" },
+      "committer": { "name": "Ada Contrib", "email": "ada@example.com", "date": "2026-10-10T09:00:00Z" },
+      "message": "uploader: retry on 5xx and timeouts\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nSigned-off-by: Ada Contrib <ada@example.com>",
+      "verification": { "verified": false, "reason": "unsigned", "signature": null, "payload": null }
+    },
+    "author": { "login": "ada-contrib", "id": 5550001, "type": "User" },
+    "committer": { "login": "ada-contrib", "id": 5550001, "type": "User" },
+    "parents": [{ "sha": "9fceb02d0ae598e95dc970b74767f19372d61af8" }]
+  },
+  {
+    "sha": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+    "commit": {
+      "author": { "name": "Ada Contrib", "email": "ada@example.com", "date": "2026-10-10T09:10:00Z" },
+      "committer": { "name": "Ada Contrib", "email": "ada@example.com", "date": "2026-10-10T09:10:00Z" },
+      "message": "uploader: add tests for backoff\n\nSigned-off-by: Ada Contrib <ada@example.com>",
+      "verification": { "verified": false, "reason": "unsigned", "signature": null, "payload": null }
+    },
+    "author": { "login": "ada-contrib", "id": 5550001, "type": "User" },
+    "committer": { "login": "ada-contrib", "id": 5550001, "type": "User" },
+    "parents": [{ "sha": "1f2e3d4c5b6a79881726354433221100ffeeddcc" }]
+  }
+]

@@ -1,0 +1,40 @@
+name: AI Contribution Check
+description: Check pull requests against your repository's AI-contribution policy (disclosure, trailers, DCO, linked-issue rules).
+author: Pujitha Paladugu
+branding:
+  icon: check-square
+  color: blue
+
+inputs:
+  policy-file:
+    description: Path of the policy file in the base repository. It is read from the base commit, never from the pull request.
+    required: false
+    default: .github/ai-policy.yml
+  fail-on:
+    description: '"violation" fails the step when a rule is violated; "never" only reports.'
+    required: false
+    default: violation
+  comment:
+    description: Post the report as one pull request comment that is updated on every run. Needs "pull-requests: write".
+    required: false
+    default: 'false'
+  bot-authors:
+    description: Extra GitHub logins (comma- or newline-separated, "*" wildcards allowed) whose pull requests and commits count as AI-assisted. Added to a built-in list of AI agent accounts.
+    required: false
+    default: ''
+  token:
+    description: Token used to read the pull request, its commits and linked issues (and to post the comment when enabled).
+    required: false
+    default: ${{ github.token }}
+
+outputs:
+  ai-assisted:
+    description: '"true" if AI assistance was detected, otherwise "false". Not set when the policy file is missing or invalid.'
+  violations:
+    description: Number of policy violations found. Not set when the policy file is missing or invalid.
+  report:
+    description: The report as Markdown. Contains text from the pull request; pass it through an environment variable, never inline it into a run script.
+
+runs:
+  using: node24
+  main: dist/index.js

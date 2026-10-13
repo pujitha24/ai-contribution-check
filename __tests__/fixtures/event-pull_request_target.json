@@ -1,0 +1,50 @@
+{
+  "action": "opened",
+  "number": 42,
+  "pull_request": {
+    "url": "https://api.github.com/repos/acme/widgets/pulls/42",
+    "id": 2100000042,
+    "node_id": "PR_kwDOAAAAAA4AAAAq",
+    "html_url": "https://github.com/acme/widgets/pull/42",
+    "number": 42,
+    "state": "open",
+    "locked": false,
+    "title": "Retry uploads on transient errors",
+    "user": { "login": "ada-contrib", "id": 5550001, "type": "User", "site_admin": false },
+    "body": "Fixes #17\n\nAdds exponential backoff to the uploader.\n\n## AI disclosure\nI used Claude Code to draft the retry loop and reviewed every line.",
+    "created_at": "2026-10-10T09:12:44Z",
+    "updated_at": "2026-10-10T09:12:44Z",
+    "draft": false,
+    "commits": 2,
+    "additions": 48,
+    "deletions": 6,
+    "changed_files": 3,
+    "author_association": "FIRST_TIME_CONTRIBUTOR",
+    "head": {
+      "label": "ada-contrib:retry-uploads",
+      "ref": "retry-uploads",
+      "sha": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "user": { "login": "ada-contrib", "id": 5550001, "type": "User" },
+      "repo": { "id": 900000002, "name": "widgets", "full_name": "ada-contrib/widgets", "fork": true, "private": false }
+    },
+    "base": {
+      "label": "acme:main",
+      "ref": "main",
+      "sha": "9fceb02d0ae598e95dc970b74767f19372d61af8",
+      "user": { "login": "acme", "id": 5550000, "type": "Organization" },
+      "repo": { "id": 900000001, "name": "widgets", "full_name": "acme/widgets", "fork": false, "private": false, "default_branch": "main" }
+    }
+  },
+  "repository": {
+    "id": 900000001,
+    "node_id": "R_kgDOAAAAAQ",
+    "name": "widgets",
+    "full_name": "acme/widgets",
+    "private": false,
+    "owner": { "login": "acme", "id": 5550000, "type": "Organization" },
+    "html_url": "https://github.com/acme/widgets",
+    "default_branch": "main"
+  },
+  "organization": { "login": "acme", "id": 5550000 },
+  "sender": { "login": "ada-contrib", "id": 5550001, "type": "User" }
+}

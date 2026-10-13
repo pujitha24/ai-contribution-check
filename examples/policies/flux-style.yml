@@ -1,0 +1,12 @@
+# Flux-style policy: every commit of an AI-assisted PR carries an
+# "Assisted-by: AGENT_NAME:MODEL_VERSION" trailer, and commits are signed off (DCO).
+version: 1
+ai_use: disclose
+disclosure:
+  required: true
+  where: [commit-trailer]
+  example: "Assisted-by: Claude:claude-opus-4-1"
+trailers:
+  assisted_by: required
+  co_authored_by_ai: unspecified
+dco: true

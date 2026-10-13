@@ -1,0 +1,19 @@
+{
+  "data": {
+    "repository": {
+      "pullRequest": {
+        "closingIssuesReferences": {
+          "nodes": [
+            {
+              "number": 17,
+              "state": "OPEN",
+              "repository": { "name": "widgets", "owner": { "login": "acme" } },
+              "labels": { "nodes": [{ "name": "triaged" }, { "name": "kind/bug" }] },
+              "assignees": { "nodes": [] }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

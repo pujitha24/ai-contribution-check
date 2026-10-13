@@ -1,0 +1,33 @@
+{
+  "name": "ai-contribution-check",
+  "version": "0.1.0",
+  "private": true,
+  "description": "GitHub Action that checks pull requests against a repository's AI-contribution policy (.github/ai-policy.yml).",
+  "license": "MIT",
+  "author": "Pujitha Paladugu",
+  "type": "module",
+  "engines": {
+    "node": ">=22.12"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "lint": "eslint .",
+    "build": "tsc -p tsconfig.build.json && ncc build lib/index.js -o dist --license licenses.txt --target es2023 && rm -rf lib",
+    "test": "vitest run",
+    "all": "npm run typecheck && npm run lint && npm run build && npm test"
+  },
+  "dependencies": {
+    "@actions/core": "3.0.1",
+    "@actions/github": "9.1.1",
+    "yaml": "2.9.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "10.0.1",
+    "@types/node": "24.19.1",
+    "@vercel/ncc": "0.45.0",
+    "eslint": "10.12.0",
+    "typescript": "6.0.3",
+    "typescript-eslint": "8.71.1",
+    "vitest": "5.0.3"
+  }
+}

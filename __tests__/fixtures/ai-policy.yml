@@ -1,0 +1,15 @@
+# Policy used by the end-to-end test.
+version: 1
+ai_use: restricted
+disclosure:
+  required: true
+  where: [description]
+trailers:
+  assisted_by: allowed
+  co_authored_by_ai: banned
+human_only: [review-replies]
+issue_first: true
+required_labels:
+  - [triaged]
+  - [help wanted, good first issue]
+dco: true

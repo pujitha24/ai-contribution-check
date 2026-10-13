@@ -1,0 +1,11 @@
+# Radius-style policy: automated and AI-assisted contributions are limited to
+# issues labelled `triaged` AND (`help wanted` OR `good first issue`).
+version: 1
+ai_use: restricted
+disclosure:
+  required: true
+  where: [description, checkbox]
+issue_first: true
+required_labels:
+  - [triaged]
+  - [help wanted, good first issue]

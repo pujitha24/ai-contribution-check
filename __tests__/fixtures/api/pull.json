@@ -1,0 +1,16 @@
+{
+  "url": "https://api.github.com/repos/acme/widgets/pulls/42",
+  "number": 42,
+  "state": "open",
+  "title": "Retry uploads on transient errors",
+  "user": { "login": "ada-contrib", "id": 5550001, "type": "User" },
+  "body": "Fixes #17\n\nAdds exponential backoff to the uploader.\n\n## AI disclosure\nI used Claude Code to draft the retry loop and reviewed every line.",
+  "head": { "ref": "retry-uploads", "sha": "4b825dc642cb6eb9a060e54bf8d69288fbee4904" },
+  "base": { "ref": "main", "sha": "9fceb02d0ae598e95dc970b74767f19372d61af8" },
+  "draft": false,
+  "merged": false,
+  "commits": 2,
+  "additions": 48,
+  "deletions": 6,
+  "changed_files": 3
+}

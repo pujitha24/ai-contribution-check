@@ -1,0 +1,14 @@
+# Kubernetes-style policy (modeled on the rules described in the README; check
+# your own project's written policy before copying it).
+# AI use is allowed when disclosed in the PR description. AI co-author and
+# Assisted-by trailers are not allowed. Review replies are written by humans.
+version: 1
+ai_use: disclose
+disclosure:
+  required: true
+  where: [description]
+  example: "AI disclosure: I used <tool> to draft parts of this change and reviewed every line."
+trailers:
+  assisted_by: banned
+  co_authored_by_ai: banned
+human_only: [review-replies]
