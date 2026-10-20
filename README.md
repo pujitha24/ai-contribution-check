@@ -236,7 +236,14 @@ Statements such as "No AI was used" or `AI usage: none` are recorded as negative
 
 ## Generating the policy
 
-`contribpolicy`, a sibling command-line tool, can generate `.github/ai-policy.yml` from a project's written contribution rules. It is coming soon. Until then, start from one of the files in `examples/policies/`.
+[`contribpolicy`](https://github.com/pujitha24/contribpolicy), a sibling command-line tool, reads a project's written contribution rules (CONTRIBUTING, AGENTS.md, PR templates, org-level policies) and writes this file:
+
+```bash
+pipx install contribpolicy        # until it is on PyPI: pipx install git+https://github.com/pujitha24/contribpolicy@v0.1.1
+contribpolicy show . -f yaml -o .github/ai-policy.yml
+```
+
+The extraction is heuristic, so review the file against your written rules before you commit it; every value comes with the sentence it was read from (`evidence`). The Action ignores the extra `repo`, `sources` and `evidence` fields with a warning. You can also start from one of the files in `examples/policies/`.
 
 ## Development
 
